@@ -4,7 +4,7 @@
 
 This project is an **AI-assisted clinical dashboard for oncology**, designed to help clinicians **understand a patient’s disease course quickly, safely, and with reduced cognitive burden**.
 
-Oncology care requires synthesizing complex, fragmented, longitudinal data across diagnosis, imaging, pathology, genomics, labs, treatments, and comorbidities. This dashboard focuses on **organizing information into clinically meaningful structures**, surfacing **priority signals**, and enabling **cross-domain reasoning** — without automating medical decisions.
+Oncology care requires synthesizing complex, fragmented, longitudinal data across diagnosis, imaging, pathology, genomics, labs, treatments, and comorbidities. This dashboard focuses on **organizing information into clinically meaningful structures**, surfacing **priority signals**, and enabling **cross-domain reasoning** - without automating medical decisions.
 
 The product emphasizes:
 - Clinical context awareness  
@@ -36,7 +36,7 @@ AI is used strictly for **summarization and synthesis**, not prescription.
 ## Design Principles
 
 1. **Clinical-first information hierarchy**  
-   Mirrors oncologist reasoning: snapshot → alerts → disease → function → timeline → biology → synthesis.
+   Mirrors oncologist reasoning: snapshot → alerts → disease → timeline → function → biology → synthesis.
 
 2. **Progressive disclosure**  
    High-signal information is visible by default; detailed evidence is expandable.
@@ -53,18 +53,15 @@ AI is used strictly for **summarization and synthesis**, not prescription.
 
 ### High-Level Architecture
 
-CSV Patient Dataset
-↓
-Deterministic Logic Layer
-(alert detection, prioritization)
-↓
-Structured Context Builder
-↓
-AI Services (LLM Calls)
-• Clinical Alerts Summary (AI #1)
-• Cross-Domain Clinical Reasoning (AI #2)
-↓
-Frontend Dashboard
+```mermaid
+flowchart TD
+    A[CSV Patient Dataset] --> B[Deterministic Logic Layer]
+    B --> C[Structured Context Builder]
+    C --> D[Clinical Alerts Summary (AI #1)]
+    C --> E[Cross-Domain Clinical Reasoning (AI #2)]
+    D --> F[Frontend Dashboard]
+    E --> F
+
 
 
 ---
@@ -88,14 +85,14 @@ Two **strictly bounded** AI components:
 1. **Clinical Alerts Summary**
 2. **Cross-Domain Clinical Reasoning Synthesizer**
 
-AI never decides what is important — it **summarizes and connects signals determined by logic**.
+AI never decides what is important - it **summarizes and connects signals determined by logic**.
 
 ---
 
 ## Data Model
 
 ### Dataset Characteristics
-- 83 structured clinical parameters
+- 82 structured clinical parameters
 - One row = one patient snapshot
 - Covers:
   - Demographics & staging
@@ -114,7 +111,7 @@ AI never decides what is important — it **summarizes and connects signals dete
 
 ## Dashboard Structure (Final)
 
-### Section 1 — Patient Snapshot
+### Section 1 - Patient Snapshot
 - Name, age, sex
 - ECOG performance status
 - Diagnosis and histology
@@ -125,7 +122,7 @@ _No AI, no inference._
 
 ---
 
-### Section 2 — Clinical Alerts & Priority Signals (AI-assisted)
+### Section 2 - Clinical Alerts & Priority Signals (AI-assisted)
 - Alerts triggered **only via rule-based logic**
 - Covers:
   - Disease activity
@@ -268,4 +265,5 @@ All AI-generated outputs are **assistive only** and must be interpreted by quali
 
 This project mirrors real-world oncology product challenges — balancing complexity, safety, and usability.  
 The goal is not to replace clinicians, but to **help them reason more clearly, faster, and with less cognitive burden**.
+
 

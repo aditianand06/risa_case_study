@@ -53,16 +53,16 @@ AI is used strictly for **summarization and synthesis**, not prescription.
 
 ### High-Level Architecture
 
-```mermaid
-flowchart TD
-    A[CSV Patient Dataset] --> B[Deterministic Logic Layer]
-    B --> C[Structured Context Builder]
-    C --> D[Clinical Alerts Summary (AI #1)]
-    C --> E[Cross-Domain Clinical Reasoning (AI #2)]
-    D --> F[Frontend Dashboard]
-    E --> F
-
-
+1. **CSV Patient Dataset**
+2. **Data Ingestion & Validation Layer**
+3. **Deterministic Clinical Logic Layer**  
+   - Alert detection  
+   - Priority signal generation  
+4. **Structured Clinical Context Builder**  
+5. **AI Services (LLM Calls)**  
+   - Clinical Alerts Summary (AI #1)  
+   - Cross-Domain Clinical Reasoning (AI #2)  
+6. **Frontend Clinical Dashboard**
 
 ---
 
@@ -265,5 +265,6 @@ All AI-generated outputs are **assistive only** and must be interpreted by quali
 
 This project mirrors real-world oncology product challenges — balancing complexity, safety, and usability.  
 The goal is not to replace clinicians, but to **help them reason more clearly, faster, and with less cognitive burden**.
+
 
 

@@ -56,7 +56,7 @@ AI is used strictly for **summarization and synthesis**, not prescription.
 
 #### 1️⃣ CSV Patient Dataset
 - Synthetic dataset generated using the structure and constraints of the provided sample data
-- Covers 83 oncology parameters
+- Covers 83 oncology parameters across 10 diverse patients
 - Includes multiple cancer types, stages, longitudinal visits, and edge cases
 
 #### 2️⃣ Data Ingestion & Validation
@@ -296,6 +296,7 @@ All AI-generated outputs are **assistive only** and must be interpreted by quali
 
 This project mirrors real-world oncology product challenges — balancing complexity, safety, and usability.  
 The goal is not to replace clinicians, but to **help them reason more clearly, faster, and with less cognitive burden**.
+
 
 
 

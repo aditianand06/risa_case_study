@@ -51,18 +51,49 @@ AI is used strictly for **summarization and synthesis**, not prescription.
 
 ## Architecture Overview
 
-### High-Level Architecture
 
-1. **CSV Patient Dataset**
-2. **Data Ingestion & Validation Layer**
-3. **Deterministic Clinical Logic Layer**  
-   - Alert detection  
-   - Priority signal generation  
-4. **Structured Clinical Context Builder**  
-5. **AI Services (LLM Calls)**  
-   - Clinical Alerts Summary (AI #1)  
-   - Cross-Domain Clinical Reasoning (AI #2)  
-6. **Frontend Clinical Dashboard**
+### Layer Breakdown
+
+#### 1️⃣ CSV Patient Dataset
+- Synthetic dataset generated using the structure and constraints of the provided sample data
+- Covers 83 oncology parameters
+- Includes multiple cancer types, stages, longitudinal visits, and edge cases
+
+#### 2️⃣ Data Ingestion & Validation
+- Loads patient data
+- Normalizes values
+- Detects missing or malformed critical fields
+- Ensures downstream safety
+
+#### 3️⃣ Deterministic Clinical Logic Layer
+- Rule-based alert detection (not AI)
+- Flags:
+  - Disease activity
+  - Organ dysfunction
+  - Functional decline
+  - Treatment tolerance
+  - Data quality issues
+- Fully explainable and auditable
+
+*This layer decides what matters. AI does not.*
+
+#### 4️⃣ Structured Clinical Context Builder
+- Groups data by clinical domain
+- Controls what information AI can see
+- Prevents raw data leakage into AI prompts
+
+#### 5️⃣ AI Services
+- **AI #1 — Clinical Alerts Summary**  
+  Summarizes rule-triggered alerts into concise, clinician-friendly bullets.
+
+- **AI #2 — Cross-Domain Clinical Reasoning Synthesizer**  
+  Connects biology, therapy, response, and functional status into a coherent narrative.
+
+#### 6️⃣ Frontend Dashboard
+- Sectioned layout aligned with clinical reasoning
+- Progressive disclosure
+- Color-coded signals
+- Vertical timeline for longitudinal events
 
 ---
 
@@ -265,6 +296,7 @@ All AI-generated outputs are **assistive only** and must be interpreted by quali
 
 This project mirrors real-world oncology product challenges — balancing complexity, safety, and usability.  
 The goal is not to replace clinicians, but to **help them reason more clearly, faster, and with less cognitive burden**.
+
 
 
 

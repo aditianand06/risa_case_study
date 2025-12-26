@@ -1,4 +1,4 @@
-# 🧬 AI-Assisted Oncology Clinical Dashboard
+# AI-Assisted Oncology Clinical Dashboard
 
 ## Overview
 
@@ -14,7 +14,7 @@ The product emphasizes:
 
 ---
 
-## 🎯 Product Goals
+## Product Goals
 
 ### Primary Goals
 - Enable clinicians to **understand current clinical status in seconds**
@@ -33,7 +33,7 @@ AI is used strictly for **summarization and synthesis**, not prescription.
 
 ---
 
-## 🧠 Design Principles
+## Design Principles
 
 1. **Clinical-first information hierarchy**  
    Mirrors oncologist reasoning: snapshot → alerts → disease → function → timeline → biology → synthesis.
@@ -49,7 +49,7 @@ AI is used strictly for **summarization and synthesis**, not prescription.
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ### High-Level Architecture
 
@@ -92,7 +92,7 @@ AI never decides what is important — it **summarizes and connects signals dete
 
 ---
 
-## 🧾 Data Model
+## Data Model
 
 ### Dataset Characteristics
 - 83 structured clinical parameters
@@ -112,7 +112,7 @@ AI never decides what is important — it **summarizes and connects signals dete
 
 ---
 
-## 🧩 Dashboard Structure (Final)
+## Dashboard Structure (Final)
 
 ### Section 1 — Patient Snapshot
 - Name, age, sex
@@ -200,7 +200,7 @@ Answers: **“How do these pieces fit together clinically?”**
 
 ---
 
-## 🧠 AI Usage (Responsible by Design)
+## AI Usage (Responsible by Design)
 
 ### AI #1 — Clinical Alerts Summary
 - Inputs: triggered alerts only
@@ -221,7 +221,7 @@ AI must never:
 
 ---
 
-## ⚖️ Key Tradeoffs & Assumptions
+## Key Tradeoffs & Assumptions
 
 ### Tradeoffs
 
@@ -241,7 +241,7 @@ AI must never:
 
 ---
 
-## 🚧 V1 Scope Decisions
+## V1 Scope Decisions
 
 ### Included
 - Single-patient deep view
@@ -257,14 +257,15 @@ AI must never:
 
 ---
 
-## 🛡️ Disclaimer
+## Disclaimer
 
 This product is a **clinical decision support aid**, not a medical device.  
 All AI-generated outputs are **assistive only** and must be interpreted by qualified clinicians.
 
 ---
 
-## 📌 Final Note
+## Final Note
 
 This project mirrors real-world oncology product challenges — balancing complexity, safety, and usability.  
 The goal is not to replace clinicians, but to **help them reason more clearly, faster, and with less cognitive burden**.
+
